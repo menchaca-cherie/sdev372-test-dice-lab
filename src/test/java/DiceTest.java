@@ -27,7 +27,7 @@ public class DiceTest {
     }
     
     @Test 
-    public void testDiceRoll()
+    public void testRoll()
     {
         Dice dice = new Dice(6, "red");
         int diceRoll = 1;
