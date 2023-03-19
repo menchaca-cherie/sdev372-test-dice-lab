@@ -41,16 +41,15 @@ public class DiceTest {
     public void testRoll()
     {
 
-        int roll = -1;
-        while(roll != 3)
-        {
-            roll = dice.roll();
+        int diceRoll = -1;
+        final int[] diceHistory = new int[diceRoll];
+        for (int i = 0; i < diceRoll; i++) {
+            diceHistory[i] = dice.roll();
         }
     }
     @Test
     public void testToString()
     {
-        Dice dice = new Dice(6, "red");
         assertEquals("A 6 sided die", dice.toString());
     }
 
