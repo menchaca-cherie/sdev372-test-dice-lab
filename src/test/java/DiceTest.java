@@ -8,22 +8,23 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class DiceTest {
 
+    Dice dice = new Dice(6, "red");
     @Test
     public void testDice()
     {
-        Dice dice = new Dice(6, "red");
+
         assertEquals(6, dice.getSides());
         assertEquals("red", dice.getColor());
 
     }
     public void testColor()
     {
-        Dice dice = new Dice(6, "red");
+
         assertEquals("red", dice.getColor());
     }
     public void testSides()
     {
-        Dice dice = new Dice(6, "red");
+
         assertEquals(6, dice.getSides());
     }
 
@@ -31,7 +32,7 @@ public class DiceTest {
     @ValueSource(ints = {1, 2, 3, 4, 5, 6})
     public void testNumber()
     {
-        Dice dice = new Dice(6, "red");
+
         int rollNumber = dice.roll();
         assertTrue(true);
     }
@@ -39,11 +40,11 @@ public class DiceTest {
     @Test 
     public void testRoll()
     {
-        Dice dice = new Dice(6, "red");
-        int diceRoll = 1;
-        final int[] diceHistory = new int[diceRoll];
-        for (int i = 0; i < diceRoll; i++) {
-            diceHistory[i] = dice.roll();
+
+        int roll = -1;
+        while(roll != 3)
+        {
+            roll = dice.roll();
         }
     }
     @Test
