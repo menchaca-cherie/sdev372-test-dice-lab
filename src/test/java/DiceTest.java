@@ -16,6 +16,16 @@ public class DiceTest {
         assertEquals("red", dice.getColor());
 
     }
+    public void testColor()
+    {
+        Dice dice = new Dice(6, "red");
+        assertEquals("red", dice.getColor());
+    }
+    public void testSides()
+    {
+        Dice dice = new Dice(6, "red");
+        assertEquals(6, dice.getSides());
+    }
 
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 3, 4, 5, 6})
