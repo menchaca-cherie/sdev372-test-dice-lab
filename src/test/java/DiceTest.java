@@ -36,4 +36,12 @@ public class DiceTest {
             diceHistory[i] = dice.roll();
         }
     }
+    @Test
+    public void testToString()
+    {
+        Dice dice = new Dice(6, "red");
+        assertEquals("A 6 sided die", dice.toString());
+    }
+
+
 }
